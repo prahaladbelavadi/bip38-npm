@@ -1,6 +1,3 @@
-
-
-
 // start encrypt
 var bip38 = require('bip38')
 var wif = require('wif')

@@ -1,13 +1,14 @@
 // Start Wif
 var wif = require('wif')
 
-var privateKey = new Buffer('0000000000000000000000000000000000000000000000000000000000000001', 'hex')
+var privateKey = new Buffer('0000000000000000000000000000000000000000000000000000000000000002', 'hex')
 
 var key = wif.encode(128, privateKey, true)
 // => KwDiBf89QgGbjEhKnhXJuH7LrciVrZi3qYjgd9M7rFU73sVHnoWn
 console.log('key: '+key);
 var obj = wif.decode(key)
-console.log('wif decoded key'+obj);
+console.log('wif decoded key:'+'\n');
+console.log(obj);
 // => {
 //	version: 128,
 //	privateKey: <Buffer 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01>,
